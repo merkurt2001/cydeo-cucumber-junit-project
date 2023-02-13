@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definitions",
         dryRun = false,
-        tags = "@regression and not @admin",
-        publish = true
+        tags = "@ceos or @scientists",
+        publish = true //generating a report with public link
 )
 public class CukesRunner {}
