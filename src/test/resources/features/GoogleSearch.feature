@@ -1,3 +1,4 @@
+@ui
 Feature: Google search functionality
   Agile story: As a user, when I am on the Google search page
   I should be able to search anything and see relevant results
@@ -9,6 +10,7 @@ Feature: Google search functionality
     # MAC --> command + option + L
     # WINDOWS --> control + option + L
 
+  @google
   Scenario: Search result title verification
     Given user is on the Google search page
     When user searches for apple

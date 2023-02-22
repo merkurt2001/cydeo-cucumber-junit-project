@@ -1,4 +1,6 @@
-@regression @login
+
+
+@regression @login @ui
 Feature: Library login feature
 
   User Story:
@@ -25,3 +27,6 @@ Feature: Library login feature
     When user enters admin username
     And user enters admin password
     Then user should see the dashboard
+
+
+
