@@ -40,6 +40,7 @@ BDD builds on and extends standard agile practices such as sprint planning and b
 - Documentation that is always up-to-date
 
 Here is how typical process look like :
+
 ![bdd_process](files/bdd_process.png)
 
 Teams practicing BDD work together to discover and understand the real business needs behind a user story or feature.
@@ -168,7 +169,7 @@ Here are the other parameter type available :
 - `{string}`	Matches single-quoted or double-quoted strings, for example "banana split" or 'banana split' (but not banana split). Only the text between the quotes will be extracted. The quotes themselves are discarded.
 - {} anonymous
 
-Here is another example
+
 ![step-matching](files/gerkin_match_java.png)
 
 
@@ -182,6 +183,7 @@ Here is another example
     2. group id : `com.cydeo`
     3. artifact id : leave it as is
     4. Click Create
+   
        ![maven-project](files/project_create.png)
 2. create folder structure as below
     1. under `src/test/java` create below packages
@@ -221,15 +223,14 @@ Here is another example
 5. Add a feature file called `feature_name.feature` under `src/test/resources/feature`
     1. right click on features folder ---> New ---> File --> GoogleSearch.feature
     2. add below content
-
     ```feature
-Feature: Google search functionality
-Agile story: As a user, when I am on the Google search page
-I should be able to search anything and see relevant results
+     Feature: Google search functionality
+     Agile story: As a user, when I am on the Google search page
+     I should be able to search anything and see relevant results
 
-Scenario: Search page default title verification
-When user is on the Google search page
-Then user should see title is Google
+     Scenario: Search page default title verification
+      When user is on the Google search page
+      Then user should see title is Google
     ```
 
 
@@ -502,6 +503,7 @@ public class Bing_StepDefinitions {
     }
 }
 ```
+How to set parameter from gherkin to step definitions
 
 ![parameters_with_cucumber_expression](files/parameter_gherkin.png)
 
@@ -619,8 +621,9 @@ They can be used for two purposes:
       
       ```
       
+      How tags are working in Hooks
 
- ![conditional_hook](files/tag_control.png)
+    ![conditional_hook](files/tag_control.png)
 
 Tags are used in feature file at feature level or scenario level.
 

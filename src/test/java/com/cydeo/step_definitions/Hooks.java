@@ -20,6 +20,7 @@ public class Hooks {
 
    // @Before (value = "@ui", order = 2 )
     public void login_scenario_before(){
+
         System.out.println("---> @Before: RUNNING BEFORE EACH SCENARIO");
     }
 
