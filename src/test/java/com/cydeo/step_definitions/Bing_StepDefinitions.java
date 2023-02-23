@@ -18,10 +18,7 @@ public class Bing_StepDefinitions {
         Driver.getDriver().get("https://www.bing.com");
 
     }
-    @When("user enters orange in the Bing search box")
-    public void user_enters_orange_in_the_bing_search_box() {
-        bingSearchPage.searchBox.sendKeys("orange" + Keys.ENTER);
-    }
+
 
 
     @When("user enters {string} in the Bing search box")
@@ -38,6 +35,16 @@ public class Bing_StepDefinitions {
         //BrowserUtils.verifyTitleContains(expectedTitle);
 
     }
+
+    @When("user enters orange in the Bing search box")
+    public void user_enters_orange_in_the_bing_search_box() {
+        bingSearchPage.searchBox.sendKeys("orange" + Keys.ENTER);
+    }
+
+
+
+
+
 
     @Then("user should see orange in the title")
     public void userShouldSeeOrangeInTheTitle() {

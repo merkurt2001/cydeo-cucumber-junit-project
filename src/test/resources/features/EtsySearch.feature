@@ -1,5 +1,15 @@
+@ui
 Feature: Etsy search functionality
   Agile Story: User should be able to type any keyword and see relevant information
+
+
+
+  Scenario: Etsy Search Functionality Title Verification (without parameterization)
+    Given user is on the Etsy homepage
+    When user types Wooden Spoon in the search box
+    And user click to Etsy search button
+    Then user sees Wooden Spoon is in the title
+
 
   Scenario: Etsy Title Verification
     Given user is on the Etsy homepage

@@ -14,11 +14,14 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
+
                 <configuration>
                     <parallel>methods</parallel>
-                    <useUnlimitedThreads>false</useUnlimitedThreads>
+                   <useUnlimitedThreads>false</useUnlimitedThreads>
                     <threadCount>4</threadCount>
-                    <testFailureIgnore>true</testFailureIgnore>
+
+                    <perCoreThreadCount>false</perCoreThreadCount>
+                <!--    <testFailureIgnore>true</testFailureIgnore> -->
                     <includes>
                         <include>**/CukesRunner*.java</include>
                     </includes>
@@ -36,11 +39,23 @@
 
     <dependencies>
 
+      <!--  <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>-->
+
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M9</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->

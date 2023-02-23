@@ -13,20 +13,21 @@ for ALL the SCENARIOS and even STEPS.
 public class Hooks {
 
     //import the @Before coming from io.cucumber.java
-    @Before (order = 1)
+   @Before (order = 1)
     public void setupMethod(){
         System.out.println("---> @Before: RUNNING BEFORE EACH SCENARIO");
     }
 
-    //@Before (value = "@login", order = 2 )
+   // @Before (value = "@ui", order = 2 )
     public void login_scenario_before(){
+
         System.out.println("---> @Before: RUNNING BEFORE EACH SCENARIO");
     }
 
     /*
     @After will be executed automatically after EVERY scenario in the project.
      */
-    @After
+    @After()
     public void teardownMethod(Scenario scenario){
 
         if (scenario.isFailed()) {
